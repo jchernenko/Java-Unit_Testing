@@ -1,0 +1,22 @@
+AccountTest
+testAccountNumber - allows camel case account numbers (ie. aBc123).
+testAddToBalance - allows using 0.00 as a parameter to add to balance.
+testSubtractFromBalance - allows using 0.00 as a parameter to subtract from balance.
+testBadConstructorParam - didn't throw exception when account number parameter was null or blank.
+testBadConstructorName - expected an illegalargumentexception but didn't get one.
+
+CustomerTest
+SetFirstName - allows first name to be set as a string with number (ie. "123")
+SetFirstName - allows first name to be set with a camel case string (ie. "JoHn")
+SetFirstName - allows first name to be set with a space in the name (ie. "F rank")
+SetLastName - allows last name to be set as a string with number (ie. "123")
+SetLastName - allows last name to be set with a camel case string (ie. "FrAsEr")
+SetLastName - allows last name to be set with a space in the name (ie. "F raser")
+SetPasscode - allowed me to set passcode to "a" -- should probably require more characters
+SetPasscode - allowed me to set passcode to space in it (ie. aaa 111)
+
+BankTest
+not entirely sure I did the testing property for displaying to string info. when I tried testing like this:
+assertEquals(bank.displaycustomerinformation(customer1), customer1.toString()); my assertEquals would error out.
+
+testCloseAccount - when removing a single customer by account number it seems to be deleting all the customers in the hashmap.
